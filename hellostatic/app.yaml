@@ -1,4 +1,4 @@
-application: helloworld
+application: first-gae-app
 version: 1
 runtime: python
 api_version: 1
