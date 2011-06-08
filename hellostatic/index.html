@@ -16,6 +16,13 @@
         <h2>Please leave a message</h2>
     {% endif %}
 
+    <form action="/sign" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Sign Guestbook"></div>
+    </form>
+
+    <h2>Messages</h2>
+
     {% for greeting in greetings %}
       {% if greeting.author %}
         <b>{{ greeting.author.nickname }}</b> wrote:
@@ -24,11 +31,6 @@
       {% endif %}
       <blockquote>{{ greeting.content|escape }}</blockquote>
     {% endfor %}
-
-    <form action="/sign" method="post">
-      <div><textarea name="content" rows="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Sign Guestbook"></div>
-    </form>
     
     <p id="footer">Based on: <a href="http://code.google.com/appengine/docs/python/gettingstarted/">http://code.google.com/appengine/docs/python/gettingstarted/</a>. Fork code on Github: <a href="https://github.com/aclark4life/First-GAE-App">https://github.com/aclark4life/First-GAE-App</a>.</p>
 
