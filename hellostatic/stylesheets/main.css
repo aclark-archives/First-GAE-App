@@ -10,4 +10,5 @@ body {
 #footer {
     text-align: center;
     font-size: 80%;
+    margin, padding: 1em;
 }
