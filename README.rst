@@ -8,7 +8,7 @@ Tutorial
 --------
 
 This repository contains sample code from the GAE tutorial located here:
-http://code.google.com/appengine/docs/python/gettingstarted/:
+http://code.google.com/appengine/docs/python/gettingstarted/.
 
 +------------------------------+-----------------------------------------------+
 | * Hello, World!              | * helloworld/                                 |
