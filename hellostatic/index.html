@@ -9,7 +9,12 @@
     <a id="login" href="{{ url }}">{{ url_linktext }}</a>
 
     <h1>Welcome to my guestbook</h1>
-    <h2>Please <a href="{{ url }}">{{ url_linktext|lower }}</a> and leave a message</h2>
+
+    {% if not logged_in %}
+        <h2>Please <a href="{{ url }}">{{ url_linktext|lower }}</a> and leave a message</h2>
+    {% else %}
+        <h2>Please leave a message</h2>
+    {% endif %}
 
     {% for greeting in greetings %}
       {% if greeting.author %}
@@ -24,7 +29,7 @@
       <div><textarea name="content" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Sign Guestbook"></div>
     </form>
-
+    
     <p id="footer">Based on: <a href="http://code.google.com/appengine/docs/python/gettingstarted/">http://code.google.com/appengine/docs/python/gettingstarted/</a>. Fork code on Github: <a href="https://github.com/aclark4life/First-GAE-App">https://github.com/aclark4life/First-GAE-App</a>.</p>
 
   </body>

@@ -31,9 +31,11 @@ class MainPage(webapp.RequestHandler):
             guestbook_key(guestbook_name)).order('-date')
         greetings = greetings_query.fetch(10)
 
+        logged_in = False
         if users.get_current_user():
             url = users.create_logout_url(self.request.uri)
             url_linktext = 'Logout'
+            logged_in = True
         else:
             url = users.create_login_url(self.request.uri)
             url_linktext = 'Login'
@@ -42,6 +44,7 @@ class MainPage(webapp.RequestHandler):
             'greetings': greetings,
             'url': url,
             'url_linktext': url_linktext,
+            'logged_in': logged_in,
         }
 
         path = os.path.join(os.path.dirname(__file__), 'index.html')
