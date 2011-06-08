@@ -17,6 +17,7 @@ http://code.google.com/appengine/docs/python/gettingstarted/:
 | * Handling Forms With webapp | * helloforms/                                 |
 | * Using the Datastore        | * hellodata/                                  |
 | * Using Templates            | * hellotemplates/                             |
-| * Using Static Files         | * hellostatic/                                |
++------------------------------+-----------------------------------------------+
+| * Using Static Files         | * hellostatic/ (deployed app)                 |
 +------------------------------+-----------------------------------------------+
 
