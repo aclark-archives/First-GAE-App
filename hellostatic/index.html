@@ -4,9 +4,12 @@
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
   </head>
 
-  <h1>Welcome to my guestbook</h1>
-
   <body>
+
+    <a id="login" href="{{ url }}">{{ url_linktext }}</a>
+
+    <h1>Welcome to my guestbook</h1>
+
     {% for greeting in greetings %}
       {% if greeting.author %}
         <b>{{ greeting.author.nickname }}</b> wrote:
@@ -20,8 +23,6 @@
       <div><textarea name="content" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Sign Guestbook"></div>
     </form>
-
-    <a href="{{ url }}">{{ url_linktext }}</a>
 
   </body>
 </html>
