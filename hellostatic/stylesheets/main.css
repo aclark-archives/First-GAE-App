@@ -6,3 +6,8 @@ body {
 #login {
     float: right
 }
+
+#footer {
+    text-align: center;
+    font-size: 80%;
+}
